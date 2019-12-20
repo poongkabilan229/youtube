@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="youtube.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="yt.js"></script>
+    <title>YouTube</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="header">
+            <a href="" class="menu"><img class="menuimg" src="menu.png"></a>
+            <a href="" class="logo"><img class="logoimg" src="logo.png"><span class="tooltipyt">YouTubeHome</span></a>
+            <div class="searchbox">
+                <div class="field">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="sicon">
+                    <button class="icon">
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%; fill:#a0a0a0">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg><span class="tooltipsearch">Search</span>
+                    </button>
+                </div>
+            </div>
+            <div class="options">
+                <div class="dropdown">
+                    <button class="oppost" onclick="drop()">
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg><span class="tooltippost">Create a video or post</span>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="">Upload Video</a>
+                        <a href="">Go Live</a>
+                    </div>
+                </div>
+                <div class="dropdown1">
+                    <button class="opapps" onclick="drop1()">
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg><span class="tooltipapps">Youtube Apps</span>
+                    </button>
+                    <div id="myDropdown1" class="dropdown-content1">
+                        <a href="">YouTube TV</a>
+                        <a href="">YouTube Music</a>
+                        <a href="">YouTube Kids</a>
+                        <a href="">YouTube FOr Artists</a>
+                    </div>
+                </div>
+                <!-- <div class="dropdown"> -->
+                <button class="opset" onclick="drop()">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        class="style-scope yt-icon"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg><span class="tooltiptext">Settings</span>
+                </button>
+                <!-- <div id="myDropdown" class="dropdown-content">
+                <a href="">YouTube TV</a>
+                <a href="">YouTube Music</a>
+                <a href="">YouTube Kids</a>
+                <a href="">YouTube FOr Artists</a>
+        </div>
+        </div> -->
+                <div class="signin">
+                    <button>
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%; fill:blue;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M12,0 C18.62375,0 24,5.37625 24,12 C24,18.62375 18.62375,24 12,24 C5.37625,24 0,18.62375 0,12 C0,5.37625 5.37625,0 12,0 Z M12,10.63625 C13.66,10.63625 15,9.29625 15,7.63625 C15,5.97625 13.66,4.63625 12,4.63625 C10.34,4.63625 9,5.97625 9,7.63625 C9,9.29625 10.34,10.63625 12,10.63625 Z M12,12.40875 C8.33375,12.40875 5.455,14.18125 5.455,15.8175 C6.84125,17.95 9.26875,19.3625 12,19.3625 C14.73125,19.3625 17.15875,17.95 18.545,15.8175 C18.545,14.18125 15.66625,12.40875 12,12.40875 Z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sidediv">
+                <div class="mainicons">
+                    <div class="home" id="hactive">
+                        <div class="svghome">
+                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px; fill:red;">
+                                    <g class="style-scope yt-icon">
+                                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8" class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg><span class="tooltiphome">Home</span></a>
+                        </div>
+                        <p>Home</p>
+                    </div>
+                    <div class="home">
+                        <div class="svgtrend">
+                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M17.53 11.2c-.23-.3-.5-.56-.76-.82-.65-.6-1.4-1.03-2.03-1.66-1.46-1.46-1.78-3.87-.85-5.72-.9.23-1.75.75-2.45 1.32C8.9 6.4 7.9 10.07 9.1 13.22c.04.1.08.2.08.33 0 .22-.15.42-.35.5-.22.1-.46.04-.64-.12-.06-.05-.1-.1-.15-.17-1.1-1.43-1.28-3.48-.53-5.12C5.87 10 5 12.3 5.12 14.47c.04.5.1 1 .27 1.5.14.6.4 1.2.72 1.73 1.04 1.73 2.87 2.97 4.84 3.22 2.1.27 4.35-.12 5.96-1.6 1.8-1.66 2.45-4.3 1.5-6.6l-.13-.26c-.2-.45-.47-.87-.78-1.25zm-3.1 6.3c-.28.24-.73.5-1.08.6-1.1.38-2.2-.16-2.88-.82 1.2-.28 1.9-1.16 2.1-2.05.17-.8-.14-1.46-.27-2.23-.12-.74-.1-1.37.2-2.06.15.38.35.76.58 1.06.76 1 1.95 1.44 2.2 2.8.04.14.06.28.06.43.03.82-.32 1.72-.92 2.26z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg><span class="tooltiptrend">Trending</span></a>
+                        </div>
+                        <p>Trending</p>
+                    </div>
+                    <div class="home">
+                        <div class="svgsub">
+                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px;">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg><span class="tooltipsub">Subscriptions</span></a>
+                        </div>
+                        <p>Subscriptions</p>
+                    </div>
+                    <hr>
+                </div>
+                <div class="lasticons">
+                    <div class="home">
+                        <div class="svglib">
+                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px;">
+                                    <g fill-rule="evenodd" class="style-scope yt-icon">
+                                        <path
+                                            d="M12,6.75 L10.2,5 L4.8,5 C3.81,5 3,5.7875 3,6.75 L3,17.25 C3,18.2125 3.81,19 4.8,19 L19.2,19 C20.19,19 21,18.2125 21,17.25 L21,8.5 C21,7.5375 20.19,6.75 19.2,6.75 L12,6.75 Z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg><span class="tooltiplib">Library</span></a>
+                        </div>
+                        <p>Library</p>
+                    </div>
+                    <div class="home">
+                        <div class="svghis">
+                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon"
+                                    style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px;">
+                                    <g class="style-scope yt-icon">
+                                        <path
+                                            d="M11.9 3.75c-4.55 0-8.23 3.7-8.23 8.25H.92l3.57 3.57.04.13 3.7-3.7H5.5c0-3.54 2.87-6.42 6.42-6.42 3.54 0 6.4 2.88 6.4 6.42s-2.86 6.42-6.4 6.42c-1.78 0-3.38-.73-4.54-1.9l-1.3 1.3c1.5 1.5 3.55 2.43 5.83 2.43 4.58 0 8.28-3.7 8.28-8.25 0-4.56-3.7-8.25-8.26-8.25zM11 8.33v4.6l3.92 2.3.66-1.1-3.2-1.9v-3.9H11z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg><span class="tooltiphis">History</span></a>
+                        </div>
+                        <p>History</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="signindiv">
+                    <div class="signpara">
+                        <p>Sign in to like videos, comment, and subscribe.</p>
+                    </div>
+                    <div class="signin">
+                        <button>
+                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 34px; height: 34px; fill:blue; ">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M12,0 C18.62375,0 24,5.37625 24,12 C24,18.62375 18.62375,24 12,24 C5.37625,24 0,18.62375 0,12 C0,5.37625 5.37625,0 12,0 Z M12,10.63625 C13.66,10.63625 15,9.29625 15,7.63625 C15,5.97625 13.66,4.63625 12,4.63625 C10.34,4.63625 9,5.97625 9,7.63625 C9,9.29625 10.34,10.63625 12,10.63625 Z M12,12.40875 C8.33375,12.40875 5.455,14.18125 5.455,15.8175 C6.84125,17.95 9.26875,19.3625 12,19.3625 C14.73125,19.3625 17.15875,17.95 18.545,15.8175 C18.545,14.18125 15.66625,12.40875 12,12.40875 Z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+                <div class="category">
+                    <div class="titlecat">
+                        <p>BEST OF YOUTUBE</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href="" onclick="music()"><img src="music.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipmusic">Music</span></a>
+                        </div>
+                        <p>Music</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="sports.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipsports">Sports</span></a>
+                        </div>
+                        <p>Sports</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="gaming.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipgame">Gaming</span></a>
+                        </div>
+                        <p>Gaming</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="4.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipmovies">Movies</span></a>
+                        </div>
+                        <p>Movies</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="5.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipnews">News</span></a>
+                        </div>
+                        <p>News</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="6.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltiplive">Live</span></a>
+                        </div>
+                        <p>Live</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="7.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipfashion">Fashion</span></a>
+                        </div>
+                        <p>Fashion</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="8.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltipspot">Spotlight</span></a>
+                        </div>
+                        <p>Spotlight</p>
+                    </div>
+                    <div class="home">
+                        <div class="music">
+                            <a href=""><img src="9.jpg"
+                                    style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
+                                    class="tooltip360">360` video</span></a>
+                        </div>
+                        <p>360` video</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="ad">
+                    <div class="advideo">
+                        <video width="424px" height="239px" controls autoplay>
+                            <source src="ad.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="adcontent">
+                        <img src="adimg.jpg" alt="realme">
+                        <span class="adicon">Ad</span>
+                        <p style="margin-left: 10px;">Realme Pro</p>
+                    </div>
+                </div>
+                <div class="maincontent">
+                    <!-- Starting content -->
+                    <div class="start" id="startid">
+                        <div class="heading1">
+                            <h2>Recommended</h2>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="f11.webp">
+                                <div class="info">
+                                    <img src="tj.jpg">
+                                    <p>Tom and Jerry, Little Quacker, Episode 47 part-2</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f12.webp">
+                                <div class="info">
+                                    <img src="mi.jpg">
+                                    <p>Mi Note 10: Unboxing</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f13.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Meri Baari Song: Millind Gaba | New Hindi Song 2019</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f14.webp">
+                                <div class="info">
+                                    <img src="tu.jpg">
+                                    <p>7 MOST EXTREME HELICOPTERS IN THE..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading1">
+                            <h2>Trending</h2>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="f21.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Street Dancer 3D (Trailer) Varun D, Shraddha...</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f22.webp">
+                                <div class="info">
+                                    <img src="wb.jpg">
+                                    <p>TENET - Official Trailer</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f23.webp">
+                                <div class="info">
+                                    <img src="dp.jpg">
+                                    <p>Good Newwz - Trailer 2 | Batra v/s Batra | Akshay,...</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="f24.webp">
+                                <div class="info">
+                                    <img src="m4.jpg">
+                                    <p>SNOW MAKING AT HOME EASY METHOD FOR ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Music content -->
+                    <div class="musical" id="musicid">
+                        <div class="heading1">
+                            <h2>Music</h2>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="m1.webp">
+                                <div class="info">
+                                    <img src="tj.jpg">
+                                    <p>Bigil - Unakaga Official Lyric Video | Thalapathy Vijay, Nayanthara</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m2.webp">
+                                <div class="info">
+                                    <img src="mi.jpg">
+                                    <p>Kanaa - Othaiyadi Pathayila Video | Arunraja Kamaraj</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m3.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Comali - Hi Sonna Podhum Video | Jayam Ravi, Samyuktha Hegde</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m4.webp">
+                                <div class="info">
+                                    <img src="tu.jpg">
+                                    <p>Bigil - Singappenney Music Video (Tamil) | Thalapathy Vijay</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="m3.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Comali - Hi Sonna Podhum Video | Jayam Ravi, Samyuktha Hegde</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m4.webp">
+                                <div class="info">
+                                    <img src="wb.jpg">
+                                    <p>Bigil - Singappenney Music Video (Tamil) | Thalapathy Vijay</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m2.webp">
+                                <div class="info">
+                                    <img src="dp.jpg">
+                                    <p>Kanaa - Othaiyadi Pathayila Video | Arunraja Kamaraj</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="m1.webp">
+                                <div class="info">
+                                    <img src="m4.jpg">
+                                    <p>Bigil - Unakaga Official Lyric Video | Thalapathy Vijay, Nayanthara</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sports -->
+                    <div class="sport" id="sportsid">
+                        <div class="heading1">
+                            <h2>Sports</h2>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="s1.webp">
+                                <div class="info">
+                                    <img src="tj.jpg">
+                                    <p>aria-label="LAKERS at BUCKS | FULL GAME HIGHLIGHTS</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s2.webp">
+                                <div class="info">
+                                    <img src="mi.jpg">
+                                    <p>Pakistan vs Sri Lanka 2019 | Short Highlights Day 1</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s3.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Blake Challenges Bolt In 2012 | I AM BOLT</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s4.webp">
+                                <div class="info">
+                                    <img src="tu.jpg">
+                                    <p>Back-2-Back UNREAL Comebacks For OKC </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f1">
+                            <div class="s1">
+                                <img src="s3.webp">
+                                <div class="info">
+                                    <img src="ts.jpg">
+                                    <p>Blake Challenges Bolt In 2012 | I AM BOLT </p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s1.webp">
+                                <div class="info">
+                                    <img src="wb.jpg">
+                                    <p>aria-label="LAKERS at BUCKS | FULL GAME HIGHLIGHTS</p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s4.webp">
+                                <div class="info">
+                                    <img src="dp.jpg">
+                                    <p>Back-2-Back UNREAL Comebacks For OKC </p>
+                                </div>
+                            </div>
+                            <div class="s1">
+                                <img src="s2.webp">
+                                <div class="info">
+                                    <img src="m4.jpg">
+                                    <p>Pakistan vs Sri Lanka 2019 | Short Highlights Day 1 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
