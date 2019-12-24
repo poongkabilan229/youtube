@@ -631,3 +631,10 @@ hr {
     position: relative;
     display: inline-block;
   }
+/* #musicid {
+    display: none;
+} */
+ #searchid {
+    flex-basis: 100%;
+    display: flexbox;
+ }
