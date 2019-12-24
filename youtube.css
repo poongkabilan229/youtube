@@ -626,11 +626,12 @@ hr {
   
   .dropdown1 a:hover {background-color: #ddd;}
   
-  .show {display: block;}
+  .show1 {display: block;}
   .dropdown1 {
     position: relative;
     display: inline-block;
   }
+  
 /* #musicid {
     display: none;
 } */
@@ -638,3 +639,4 @@ hr {
     flex-basis: 100%;
     display: flexbox;
  }
+

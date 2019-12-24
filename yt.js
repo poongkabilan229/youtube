@@ -14,10 +14,11 @@ function drop() {
         }
       }
     }
+   
   }
 
   function drop1() {
-    document.getElementById("myDropdown1").classList.toggle("show");
+    document.getElementById("myDropdown1").classList.toggle("show1");
   }
   
   // Close the dropdown if the user clicks outside of it
@@ -27,12 +28,13 @@ function drop() {
       var i;
       for (i = 0; i < dropdowns1.length; i++) {
         var openDropdown1 = dropdowns1[i];
-        if (openDropdown1.classList.contains('show')) {
-          openDropdown1.classList.remove('show');
+        if (openDropdown1.classList.contains('show1')) {
+          openDropdown1.classList.remove('show1');
         }
       }
     }
   }
+ 
 function music(){
     document.getElementById("startid").style.display="none";
     document.getElementById("sportsid").style.display="none";
