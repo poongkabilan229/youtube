@@ -545,6 +545,7 @@ hr {
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
+    justify-content: start;
 }
 .f1 {
     display: flex;
@@ -639,4 +640,6 @@ hr {
     flex-basis: 100%;
     display: flexbox;
  }
-
+.home p{
+    display: block;
+}
