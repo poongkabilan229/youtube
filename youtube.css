@@ -509,16 +509,16 @@ hr {
     display: flex;
 }
 .advideo {
-    width: 54%;
+    width: 40%;
     height: 251px;
     /* border:1px solid red; */
     display: flex;
     align-items: center;
     align-content: center;
-    padding-left: 66px;
+    /* padding-left: 66px; */
 }
 .adcontent {
-    width: 45%;
+    width: 23%;
     height: 251px;
     /* border: 1px solid brown; */
     display: flex;
@@ -539,6 +539,12 @@ hr {
     font-size: 14px;
     margin-left: 35px;
 }
+.adcontent button {
+    width: 99px;
+    height: 24px;
+    margin-left: 58px;
+    border-color: aliceblue;
+}
 .maincontent {
     width: 98%;
     height: auto;
@@ -548,8 +554,9 @@ hr {
     justify-content: start;
 }
 .f1 {
-    display: flex;
+    display: grid;
     flex-direction: row;
+    grid-template-columns: repeat(4,25%);
     justify-content: space-evenly;
 }
 .f1 img {
@@ -583,6 +590,7 @@ hr {
 .info p {
     padding-left: 7px;
     font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .dropdown-content {
     display: none;
@@ -638,8 +646,53 @@ hr {
 } */
  #searchid {
     flex-basis: 100%;
-    display: flexbox;
+    display: none;
+    
  }
 .home p{
     display: block;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.add {
+    /* border: 1px solid green; */
+    width: 37%;
+}
+.popup {
+    width: 100%;
+    /* border: 1px solid blueviolet; */
+    /* display: grid; */
+    display: none;
+    
+}
+.popup input {
+    width: 75%;
+    margin-bottom: 2px;
+}
+.del img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .s1 .del {
+    position: absolute;
+    top: 26%;
+    left: 36%;
+    width:20px;
+    height:20px;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .del {
+  display:none;
+  }
+  
+  .s1:hover .del{
+   display:block;
+  }

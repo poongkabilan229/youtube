@@ -120,11 +120,11 @@
                                     </g>
                                 </svg><span class="tooltiphome">Home</span></a>
                         </div>
-                        <p >Home</p>
+                        <p>Home</p>
                     </div>
-                    <div class="home">
+                    <div class="home" id="pointtrend">
                         <div class="svgtrend">
-                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            <a ><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                                     class="style-scope yt-icon"
                                     style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px">
                                     <g class="style-scope yt-icon">
@@ -134,11 +134,11 @@
                                     </g>
                                 </svg><span class="tooltiptrend">Trending</span></a>
                         </div>
-                        <p >Trending</p>
+                        <p>Trending</p>
                     </div>
                     <div class="home">
                         <div class="svgsub">
-                            <a href=""><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            <a><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                                     class="style-scope yt-icon"
                                     style="pointer-events: none; display: block; width: 24px; height: 24px; margin:0px 24px 0px 0px;">
                                     <g class="style-scope yt-icon">
@@ -148,7 +148,7 @@
                                     </g>
                                 </svg><span class="tooltipsub">Subscriptions</span></a>
                         </div>
-                        <p >Subscriptions</p>
+                        <p>Subscriptions</p>
                     </div>
                     <hr>
                 </div>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="home">
                         <div class="music">
-                            <a onclick="sports()"><img src="images/sports.jpg"
+                            <a onclick="game()"><img src="images/sports.jpg"
                                     style="width: 24px; height: 24px; margin:0px 24px 0px 0px;"><span
                                     class="tooltipsports">Sports</span>Sports</a>
                         </div>
@@ -291,231 +291,87 @@
                         <span class="adicon">Ad</span>
                         <p style="margin-left: 10px;">Realme Pro</p>
                     </div>
+                    <div class="add">
+                        <button onclick="addvideo()" style="margin-left: 147px; margin-top: 5px;">Add videos</button>
+                        <div class="popup" id="popup">
+                            <h3>Enter the details</h3>
+                            <input type="text" id="addcategory" placeholder="Enter the category">
+                            <input type="text" id="addurl" placeholder="Enter the url">
+                            <input type="text" id="addpara" placeholder="Enter the description">
+                            <button onclick="submit()" style="margin-left: 147px; margin-top: 5px;">Submit</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="maincontent" id="main">
-                    
-                        <!-- Starting content -->
-                        <div class="start" id="startid">
-                            <div class="heading1">
-                                <h2>Recommended</h2>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="0">
-                                    <img src="images/f11.webp" id="tom">
-                                    <div class="info">
-                                        <img src="images/tj.jpg">
-                                        <p>Tom and Jerry, Little Quacker, Episode 47 part-2</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="1">
-                                    <img src="images/f12.webp" id="g12">
-                                    <div class="info">
-                                        <img src="images/mi.jpg">
-                                        <p>Mi Note 10: Unboxing</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="2">
-                                    <img src="images/f13.webp" id="g13">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Meri Baari Song: Millind Gaba | New Hindi Song 2019</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="3">
-                                    <img src="images/f14.webp" id="g14">
-                                    <div class="info">
-                                        <img src="images/tu.jpg">
-                                        <p>7 MOST EXTREME HELICOPTERS IN THE..</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="heading1">
-                                <h2>Trending</h2>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="4">
-                                    <img src="images/f21.webp" id="g21">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Street Dancer 3D (Trailer) Varun D, Shraddha...</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="5">
-                                    <img src="images/f22.webp" id="g22">
-                                    <div class="info">
-                                        <img src="images/wb.jpg">
-                                        <p>TENET - Official Trailer</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="6">
-                                    <img src="images/f23.webp" id="g23">
-                                    <div class="info">
-                                        <img src="images/dp.jpg">
-                                        <p>Good Newwz - Trailer 2 | Batra v/s Batra | Akshay,...</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="7">
-                                    <img src="images/f24.webp" id="g24">
-                                    <div class="info">
-                                        <img src="images/m4.jpg">
-                                        <p>SNOW MAKING AT HOME EASY METHOD FOR ...</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="search" id="searchid">
+                        <div class="heading1">
+                            <h2>Search Results</h2>
                         </div>
-                        <!-- Music content -->
-                        <div class="musical" id="musicid">
-                            <div class="heading1">
-                                <h2>Music</h2>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="8">
-                                    <img src="images/m1.webp">
-                                    <div class="info">
-                                        <img src="images/tj.jpg">
-                                        <p>Bigil - Unakaga Official Lyric Video | Thalapathy Vijay, Nayanthara</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="9">
-                                    <img src="images/m2.webp">
-                                    <div class="info">
-                                        <img src="images/mi.jpg">
-                                        <p>Kanaa - Othaiyadi Pathayila Video | Arunraja Kamaraj</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="10">
-                                    <img src="images/m3.webp">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Comali - Hi Sonna Podhum Video | Jayam Ravi, Samyuktha Hegde</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="11">
-                                    <img src="images/m4.webp">
-                                    <div class="info">
-                                        <img src="images/tu.jpg">
-                                        <p>Bigil - Singappenney Music Video (Tamil) | Thalapathy Vijay</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="12">
-                                    <img src="images/m3.webp">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Comali - Hi Sonna Podhum Video | Jayam Ravi, Samyuktha Hegde</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="13">
-                                    <img src="images/m4.webp">
-                                    <div class="info">
-                                        <img src="images/wb.jpg">
-                                        <p>Bigil - Singappenney Music Video (Tamil) | Thalapathy Vijay</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="14">
-                                    <img src="images/m2.webp">
-                                    <div class="info">
-                                        <img src="images/dp.jpg">
-                                        <p>Kanaa - Othaiyadi Pathayila Video | Arunraja Kamaraj</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="15">
-                                    <img src="images/m1.webp">
-                                    <div class="info">
-                                        <img src="images/m4.jpg">
-                                        <p>Bigil - Unakaga Official Lyric Video | Thalapathy Vijay, Nayanthara</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="sea">
+                            <p id="no"></p>
                         </div>
-                        <!-- Sports -->
-                        <div class="sport" id="sportsid">
-                            <div class="heading1">
-                                <h2>Sports</h2>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="16">
-                                    <img src="images/s1.webp">
-                                    <div class="info">
-                                        <img src="images/tj.jpg">
-                                        <p>LAKERS at BUCKS | FULL GAME HIGHLIGHTS</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="17">
-                                    <img src="images/s2.webp">
-                                    <div class="info">
-                                        <img src="images/mi.jpg">
-                                        <p>Pakistan vs Sri Lanka 2019 | Short Highlights Day 1</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="18">
-                                    <img src="images/s3.webp">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Blake Challenges Bolt In 2012 | I AM BOLT</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="19">
-                                    <img src="images/s4.webp">
-                                    <div class="info">
-                                        <img src="images/tu.jpg">
-                                        <p>Back-2-Back UNREAL Comebacks For OKC </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="f1">
-                                <div class="s1" id="20">
-                                    <img src="images/s3.webp">
-                                    <div class="info">
-                                        <img src="images/ts.jpg">
-                                        <p>Blake Challenges Bolt In 2012 | I AM BOLT </p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="21">
-                                    <img src="images/s1.webp">
-                                    <div class="info">
-                                        <img src="images/wb.jpg">
-                                        <p>LAKERS at BUCKS | FULL GAME HIGHLIGHTS</p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="22">
-                                    <img src="images/s4.webp">
-                                    <div class="info">
-                                        <img src="images/dp.jpg">
-                                        <p>Back-2-Back UNREAL Comebacks For OKC </p>
-                                    </div>
-                                </div>
-                                <div class="s1" id="23">
-                                    <img src="images/s2.webp">
-                                    <div class="info">
-                                        <img src="images/m4.jpg">
-                                        <p>Pakistan vs Sri Lanka 2019 | Short Highlights Day 1 </p>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <!-- Starting content -->
+                    <div class="start" id="startid">
+                        <div class="heading1" id="starthead">
+                            <h2>Recommended</h2>
                         </div>
-                        <!--  -->
-                        <!-- search results -->
-                    <div class="start" id="result">
+                    </div>
+                    <div class="trend" id="trendid">
+
+                        <div class="heading1" id="trendhead">
+                            <h2>Trending</h2>
+                        </div>
+
+                    </div>
+                    <!-- Music content -->
+                    <div class="musical" id="musicid">
+                        <div class="heading1" id="musichead">
+                            <h2>Music</h2>
+                        </div>
+                        <div class="f1"></div>
+
+                    </div>
+                    <!-- Sports -->
+                    <div class="sport" id="sportsid">
+                        <div class="heading1" id="sportshead">
+                            <h2>Sports</h2>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <!--  -->
+                <!-- search results -->
+                <!-- <div class="start" id="result">
                         <div class="heading1">
                             <h3>Search results</h3>
                         </div>
                         <div class="f1" id="searchid">
                         </div>
-                        <!--  -->
-                    </div>
-                </div>
+                    </div> -->
             </div>
         </div>
+    </div>
 </body>
+<script src="yt.js"></script>
 <script>
-    $('#tom').hover(
+    $('#g10').hover(
         function e() {
-            document.getElementById('tom').src = 'images/g11.webp';
+            document.getElementById('g10').src = 'images/g10.webp';
         },
         function e() {
-            document.getElementById('tom').src = 'images/f11.webp';
+            document.getElementById('g10').src = 'images/f10.webp';
+        }
+    );
+    $('#g11').hover(
+        function e() {
+            document.getElementById('g11').src = 'images/g11.webp';
+        },
+        function e() {
+            document.getElementById('g11').src = 'images/f11.webp';
         }
     );
     $('#g12').hover(
@@ -534,12 +390,12 @@
             document.getElementById('g13').src = 'images/f13.webp';
         }
     );
-    $('#g14').hover(
+    $('#g20').hover(
         function e() {
-            document.getElementById('g14').src = 'images/g14.webp';
+            document.getElementById('g20').src = 'images/g20.webp';
         },
         function e() {
-            document.getElementById('g14').src = 'images/f14.webp';
+            document.getElementById('g20').src = 'images/f20.webp';
         }
     );
     $('#g21').hover(
@@ -566,44 +422,38 @@
             document.getElementById('g23').src = 'images/f23.webp';
         }
     );
-    $('#g24').hover(
-        function e() {
-            document.getElementById('g24').src = 'images/g24.webp';
-        },
-        function e() {
-            document.getElementById('g24').src = 'images/f24.webp';
-        }
-    );
-    var items = $('#main p').map(function () { return $(this).text(); }).get();
-    var itm;
-    var s;
-    var cln;
-    function search() {
-        var list = document.getElementById("searchid");
-        list.removeChild(list.childNodes[0]);
-        var inputs = document.getElementById("input").value;
-        var x = 1;
-        for (var i = 0; i < 24; i++) {
-            x=0;
-            x = items[i].search(inputs);
-            if (x >= 0) {
-                break;
-            }
-            else {
-                continue;
-            }
-        }
-        //   alert(x);
-        //   alert(i);
-        s = i.toString();
-        itm = document.getElementById(s);
-        cln = itm.cloneNode(true);
-        document.getElementById("startid").style.display = "none";
-        document.getElementById("sportsid").style.display = "none";
-        document.getElementById("musicid").style.display = "none";
-        document.getElementById("ad").style.display = "none";
-        document.getElementById("searchid").appendChild(cln);
-    }
+    // var items = $('#main p').map(function () { return $(this).text(); }).get();
+    // var itm;
+    // var s;
+    // var cln;
+    // function search() {
+    //     var list = document.getElementById("searchid");
+    //     list.removeChild(list.childNodes[0]);
+    //     var inputs = document.getElementById("input").value;
+    //     // inputs.toUpperCase();
+    //     var x = 1;
+    //     for (var i = 0; i < 24; i++) {
+    //         x = 0;
+    //         // items[i].toUpperCase();
+    //         x = items[i].search(inputs);
+    //         if (x >= 0) {
+    //             break;
+    //         }
+    //         else {
+    //             continue;
+    //         }
+    //     }
+    //     //   alert(x);
+    //     //   alert(i);
+    //     s = i.toString();
+    //     itm = document.getElementById(s);
+    //     cln = itm.cloneNode(true);
+    //     document.getElementById("startid").style.display = "none";
+    //     document.getElementById("sportsid").style.display = "none";
+    //     document.getElementById("musicid").style.display = "none";
+    //     document.getElementById("ad").style.display = "none";
+    //     document.getElementById("searchid").appendChild(cln);
+    // }
 
 </script>
 
