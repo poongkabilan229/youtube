@@ -21,6 +21,23 @@ if (ph) {
 
   });
 }
+var del = document.getElementById("delete");
+if (del) {
+  del.addEventListener('click', () => {
+    // var q = document.getElementById("0");
+    // q.parentNode.removeChild(q);
+    // var start2=JSON.parse(localStorage.getItem("start"));
+    var w = document.getElementById('start');
+    w.removeChild(w.childNodes[4]);
+    var e = document.getElementById('trend');
+    e.removeChild(e.childNodes[4]);
+    var f = document.getElementById('music');
+    f.removeChild(f.childNodes[8]);
+    var g = document.getElementById('sports');
+    g.removeChild(g.childNodes[8]);
+    // localStorage.clear();
+  });
+}
 function drop() {
   document.getElementById("myDropdown").classList.toggle("show");
 
@@ -46,9 +63,27 @@ function drop1() {
 }
 
 
-window.onclick = function (event) {
-  if (!event.target.matches('.opapps')) {
+window.onclick = function (event1) {
+  if (!event1.target.matches('.opapps')) {
     var dropdowns1 = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns1.length; i++) {
+      var openDropdown1 = dropdowns1[i];
+      if (openDropdown1.classList.contains('show1')) {
+        openDropdown1.classList.remove('show1');
+      }
+    }
+  }
+}
+
+function drop2() {
+  document.getElementById("myDropdown2").classList.toggle("show1");
+}
+
+
+window.onclick = function (event2) {
+  if (!event2.target.matches('.opset')) {
+    var dropdowns1 = document.getElementsByClassName("dropdown-content2");
     var i;
     for (i = 0; i < dropdowns1.length; i++) {
       var openDropdown1 = dropdowns1[i];
@@ -234,9 +269,9 @@ function submit() {
   // s1.innerText="new div s1 created";
   var img1 = document.createElement("img");
   img1.src = url;
-  var btn=document.createElement("button");
-  btn.className="del";
-  btn.innerHTML="x";
+  var btn = document.createElement("button");
+  btn.className = "del";
+  btn.innerHTML = "x";
   s1.appendChild(img1);
   s1.appendChild(btn);
   var info = document.createElement("div");
